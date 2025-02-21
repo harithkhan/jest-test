@@ -16,5 +16,14 @@
     "parserOptions": {
         "ecmaVersion": 2022,
         "sourceType": "module" 
-    }
+    },
+    "overrides": [
+        {
+        "files": ["tests/**/*"],
+        "plugins": ["jest"],
+        "env": {
+            "jest/globals": true
+        }
+        }
+    ]
 }
