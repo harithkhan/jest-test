@@ -10,7 +10,7 @@ export function caesarCipher(string, key) {
             let currentIndex;
             if (i === j) {
                 currentIndex = alphabet.indexOf(j);
-                const newIndex = currentIndex + 3;
+                const newIndex = currentIndex + key;
                 cipheredArray.push(alphabet[newIndex]);
             }
         }
@@ -18,5 +18,3 @@ export function caesarCipher(string, key) {
     const cipheredString = cipheredArray.join("");
     return cipheredString;
 }
-
-caesarCipher("abc", 2);
