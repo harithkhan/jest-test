@@ -1,8 +1,9 @@
 export function analyzeArray(arr) {
     const average = arr.reduce((acc, item) => acc + item, 0) / arr.length;
+    const min = Math.min(...arr);
     return {
         average,
-        min: 1,
+        min,
         max: 8,
         length: 6,
     };
