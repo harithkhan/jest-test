@@ -34,6 +34,9 @@ export function caesarCipher(string, key) {
     const stringArray = string.split("");
     const cipheredArray = [];
     stringArray.forEach((i) => {
+        if (!alphabet.includes(i) && !alphabet.includes(i.toLowerCase())) {
+            cipheredArray.push(i);
+        }
         alphabet.forEach((j) => {
             if (i === j || i.toLowerCase() === j) {
                 const currentIndex = alphabet.indexOf(j);
