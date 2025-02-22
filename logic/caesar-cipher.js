@@ -1,3 +1,7 @@
+function isUpperCase(letter) {
+    return letter === letter.toUpperCase();
+};
+
 export function caesarCipher(string, key) {
     const alphabet = [
         "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
@@ -8,10 +12,11 @@ export function caesarCipher(string, key) {
     for (let i of stringArray) {
         for (let j of alphabet) {
             let currentIndex;
-            if (i === j) {
+            if (i === j || i.toLowerCase() === j) {
                 currentIndex = alphabet.indexOf(j);
                 const newIndex = currentIndex + key;
-                cipheredArray.push(alphabet[newIndex]);
+                const alphabetToPush = isUpperCase(i) ? alphabet[newIndex].toUpperCase() : alphabet[newIndex];
+                cipheredArray.push(alphabetToPush);
             }
         }
     }
