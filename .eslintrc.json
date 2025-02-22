@@ -24,11 +24,10 @@
     },
     "overrides": [
         {
-        "files": ["tests/**/*"],
-        "plugins": ["jest"],
-        "env": {
-            "jest/globals": true
-        }
+            "files": ["tests/**/*"],
+            "env": {
+                "jest": true
+            }
         }
     ]
 }
